@@ -1,0 +1,6 @@
+-r base.pip
+ipython
+django-extensions
+django-debug-toolbar 
+pylint
+coverage
