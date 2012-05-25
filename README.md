@@ -8,13 +8,16 @@ django-admin.py startproject --template=https://github.com/brandonvfx/django-pro
 {% endif %}
 ## Virutal Env setup
 mkvirtualenv {{ project_name }} 
+
 pip install -r $PWD/requirements/dev.pip
 
 echo "export DJANGO_SETTINGS_MODULE={{ project_name }}.conf.local.settings" >> $VIRTUAL_ENV/bin/postactivate
+
 echo "unset DJANGO_SETTINGS_MODULE" >> $VIRTUAL_ENV/bin/postdeactivate
 
 ## DB setup
 python manage.py syncdb
+
 python manage.py migrate
 
 ## Dev server
