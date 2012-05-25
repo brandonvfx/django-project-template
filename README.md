@@ -6,7 +6,7 @@
 django-admin.py startproject --template=https://github.com/brandonvfx/django-project-template/zipball/master --extension=py,md <project_name>
 
 {% endif %}
-## Virutal Env setup
+## Virtualenv setup
 mkvirtualenv {{ project_name }} 
 
 pip install -r $PWD/requirements/dev.pip
